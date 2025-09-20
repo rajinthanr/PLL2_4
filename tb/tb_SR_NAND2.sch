@@ -48,3 +48,4 @@ C {gnd.sym} 260 -330 0 0 {name=l1 lab=GND}
 C {vsource.sym} 260 -460 0 0 {name=Vr value="PULSE(0 1.8 0 1n 1n 10n 20n)" savecurrent=false}
 C {lab_pin.sym} 260 -490 0 1 {name=p11 sig_type=std_logic lab=R}
 C {gnd.sym} 260 -430 0 0 {name=l2 lab=GND}
+C {lab_pin.sym} 230 -170 0 0 {name=p1 sig_type=std_logic lab=GND}
