@@ -45,25 +45,3 @@ C {opin.sym} 180 -180 0 0 {name=p7 lab=nQ}
 C {lab_pin.sym} 380 -180 0 0 {name=p8 sig_type=std_logic lab=S}
 C {lab_pin.sym} 650 -350 2 0 {name=p11 sig_type=std_logic lab=Q}
 C {lab_pin.sym} 650 -200 2 0 {name=p13 sig_type=std_logic lab=nQ}
-C {code_shown.sym} 740 -515 0 0 {name=SPICE only_toplevel=false value=
-"
-.option temp=27
-
-* Testbench
-
-Vdd Vdd 0 1.8           ; Power supply
-Vss Vss 0 0           ; Power supply
-Va  S   0 PULSE(0 1.8 0 1n 1n 10n 20n)  ; Input A pulse
-Vb  R   0 PULSE(0 1.8 0 1n 1n 5n 25n)  ; Input B pulse
-
-* Simulation control
-.tran 1n 200n
-
-.control
-run
-
-plot V(S) V(R)+2 V(Q)+4 V(nQ)+6
-
-
-.endc
-"}
