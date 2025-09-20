@@ -36,7 +36,7 @@ N -120 480 40 480 {lab=#net4}
 N 100 480 120 480 {lab=#net6}
 N 120 480 120 700 {lab=#net6}
 N 100 700 120 700 {lab=#net6}
-N 830 590 850 590 {lab=DN}
+N 800 120 820 120 {lab=DN}
 N 250 -140 300 -140 {lab=vdd}
 N 250 80 300 80 {lab=vss}
 N 180 -140 210 -140 {lab=#net3}
@@ -66,7 +66,7 @@ N 450 510 450 670 {lab=DN}
 N 260 580 380 580 {lab=#net8}
 N 120 580 190 580 {lab=#net6}
 N -490 -350 -470 -350 {lab=vdd}
-N -470 830 -450 830 {lab=vss}
+N -480 460 -460 460 {lab=vss}
 C {code_shown.sym} 970 -245 0 0 {name=SPICE only_toplevel=false value=
 "
 .option temp=27
@@ -261,10 +261,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {lab_pin.sym} 70 750 1 1 {name=p28 sig_type=std_logic lab=vdd}
-C {opin.sym} 850 590 0 0 {name=p29 lab=DN}
+C {opin.sym} 820 120 0 0 {name=p29 lab=DN}
 C {lab_pin.sym} -160 800 0 0 {name=p32 sig_type=std_logic lab=CLKref}
 C {lab_pin.sym} 450 580 2 0 {name=p35 sig_type=std_logic lab=DN}
-C {lab_pin.sym} 830 590 0 0 {name=p36 sig_type=std_logic lab=DN}
+C {lab_pin.sym} 800 120 0 0 {name=p36 sig_type=std_logic lab=DN}
 C {lab_pin.sym} -120 340 3 1 {name=p37 sig_type=std_logic lab=vdd}
 C {lab_pin.sym} -120 830 1 1 {name=p38 sig_type=std_logic lab=vss}
 C {lab_pin.sym} -190 480 0 0 {name=p41 sig_type=std_logic lab=CLKvco}
@@ -403,5 +403,5 @@ C {lab_pin.sym} 70 660 1 0 {name=p33 sig_type=std_logic lab=CLKvco}
 C {lab_pin.sym} 40 700 0 0 {name=p31 sig_type=std_logic lab=CLKvco}
 C {ipin.sym} -490 -350 0 0 {name=p34 lab=vdd}
 C {lab_pin.sym} -470 -350 0 1 {name=p52 sig_type=std_logic lab=vdd}
-C {ipin.sym} -470 830 0 0 {name=p53 lab=vss}
-C {lab_pin.sym} -450 830 0 1 {name=p54 sig_type=std_logic lab=vss}
+C {ipin.sym} -480 460 0 0 {name=p53 lab=vss}
+C {lab_pin.sym} -460 460 0 1 {name=p54 sig_type=std_logic lab=vss}
