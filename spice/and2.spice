@@ -1,0 +1,48 @@
+** sch_path: /foss/designs/PLL2_4/src/PFD_std.sch
+**.subckt PFD_std UP F_REF VDD GND DN F_VCO
+*.opin UP
+*.ipin F_REF
+*.ipin VDD
+*.ipin GND
+*.opin DN
+*.ipin F_VCO
+x1 F_VCO VDD RST_N GND GND VDD VDD DN sky130_fd_sc_hd__dfrtp_1
+x2 DN UP GND GND VDD VDD RST_N sky130_fd_sc_hd__nand2_2
+x4 DN UP GND GND VDD VDD RST_N sky130_fd_sc_hd__nand2_8
+x3 F_REF VDD RST_N GND GND VDD VDD UP sky130_fd_sc_hd__dfrtp_1
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /foss/pdks/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+.global VDD GND
+
+
+
+
+.option temp=27
+
+* power supplies
+VDD vdd 0 1.8
+VSS VSS 0 0
+
+
+* reference clock
+Vref F_REF 0 pulse(0 1.8 0n 1n 1n 50n 100n)
+*Vrst RST_N 0 pulse(0 1.8 18n 1n 1n 98n 100n)
+
+* VCO clock (slightly different frequency, 100 ns period ~10 MHz)
+Vvco F_VCO 0 pulse(0 1.8 15n 1n 1n 50n 100n)
+
+* analysis
+.tran 1n 2500n
+.control
+run
+plot v(F_REF) v(F_VCO) v(UP)+2 v(DN)+4 v(RST_N)+6
+
+.endc
+
+
+**** end user architecture code
+**.ends
+.end

@@ -1,0 +1,35 @@
+** sch_path: /foss/designs/PLL2_4/src/PFD_std.sch
+**.subckt PFD_std
+x1 A B GND VNB VPB VDD Out sky130_fd_sc_hd__and2b_4
+Va A GND PULSE(0 1.8 0 1n 1n 10n 20n)
+Vb B GND PULSE(0 1.8 0 1n 1n 20n 40n)
+Vdd VDD GND 1.8
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+.include /foss/pdks/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+
+
+.option temp=27
+
+* Testbench for NAND Gate
+
+* Simulation control
+.tran 1n 200n
+
+.control
+run
+
+plot V(A) V(B)+2 V(Out)+4
+
+
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

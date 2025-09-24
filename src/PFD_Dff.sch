@@ -51,11 +51,11 @@ C {code_shown.sym} 720 -505 0 0 {name=SPICE only_toplevel=false value=
 VDD vdd 0 1.8
 
 
-* reference clock (20 ns period = 50 MHz)
-Vref F_VCO 0 pulse(0 1.8 0 1n 1n 30n 100n)
+* reference clock 
+Vref F_VCO 0 pulse(0 1.8 0n 1n 1n 50n 100n)
 
 * VCO clock (slightly different frequency, 100 ns period ~10 MHz)
-Vvco F_REF 0 pulse(0 1.8 0 1n 1n 30n 94n)
+Vvco F_REF 0 pulse(0 1.8 0n 1n 1n 50n 100n)
 
 * analysis
 .tran 1n 2500n
