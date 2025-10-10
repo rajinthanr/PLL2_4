@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=5.973327e-07
-x2=6.3130383e-07
+x1=1e-11
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -35,8 +35,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=5.973327e-07
-x2=6.3130383e-07
+x1=1e-11
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -57,8 +57,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=5.973327e-07
-x2=6.3130383e-07
+x1=1e-11
+x2=1e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -71,6 +71,7 @@ color=11
 node="vdd
 "}
 P 4 1 1420 -830 {}
+P 4 1 410 -210 {}
 C {/foss/designs/PLL2_4/src/PFD_std.sym} 250 -190 0 0 {name=x1}
 C {title.sym} 160 -30 0 0 {name=l4 author="Rajinthan R"}
 C {vsource.sym} 180 -360 0 0 {name=Vdd value='VDD' savecurrent=false}
