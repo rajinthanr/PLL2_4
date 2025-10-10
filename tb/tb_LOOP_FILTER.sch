@@ -73,33 +73,24 @@ node="vdd
 P 4 1 1420 -830 {}
 C {/foss/designs/PLL2_4/git_11/LOOP_FILTER.sym} 220 -340 0 0 {name=x1}
 C {title.sym} 160 -30 0 0 {name=l4 author="Rajinthan R"}
-C {vsource.sym} 180 -190 0 0 {name=Vdd value='VDD' savecurrent=false}
+C {vsource.sym} 180 -190 0 0 {name=Vdd value=1.8 savecurrent=false}
 C {lab_pin.sym} 180 -220 0 1 {name=p3 sig_type=std_logic lab=VDD}
 C {gnd.sym} 180 -160 0 0 {name=l3 lab=GND}
 C {vsource.sym} 260 -190 0 0 {name=Vfvco value="0 pulse(0 1.8 15n 1n 1n 50n 100n)" savecurrent=false}
 C {lab_pin.sym} 260 -220 0 1 {name=p10 sig_type=std_logic lab=vin}
 C {gnd.sym} 260 -160 0 0 {name=l1 lab=GND}
-C {code_shown.sym} 470 -495 0 0 {name=SPICE only_toplevel=false value=
+C {code_shown.sym} 460 -475 0 0 {name=SPICE only_toplevel=false value=
 "
-.param TEMPGAUSS = limit(agauss(40, 30, 1),20,80)
-.option temp = 'TEMPGAUSS'
-.param VDDGAUSS = agauss(1.8, 0.05, 1)
+.param freq = 1k
+.param period = 1/freq
+V1 in 0 PULSE(0 1 0 1n 1n \{period/2\} \{period\})
 
-.param VDD = 'VDDGAUSS'
-* analysis
-
-.tran 1n 1000n uic
-
+.step param freq list 1k 2k 5k 10k 20k 50k 100k
+.tran 0 5m
 .control
-let i = 0
-dowhile i < 10
-  reset
-  run
-  write tb_PFD_std.raw
-  set appendwrite
-  reset
-  let i = i + 1
-end
+run
+
+write tb_LOOP_FILTER.raw
 .endc
 "}
 C {devices/code.sym} 10 -225 0 0 {name=TT_MODELS
