@@ -111,7 +111,7 @@ dowhile i < 10
 end
 .endc
 "}
-C {devices/code.sym} 10 -295 0 0 {name=TT_MODELS
+C {devices/code.sym} 20 -325 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value="
