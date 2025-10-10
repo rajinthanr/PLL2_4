@@ -4,92 +4,80 @@ K {}
 V {}
 S {}
 E {}
-N -280 11 -280 91 {lab=#net1}
-N 80 -110 180 -110 {lab=vout}
-N 180 -110 180 -30 {lab=vout}
-N 40 310 40 370 {lab=VN}
-N -310 131 -310 221 {lab=VN}
-N -280 221 -250 221 {lab=VN}
-N -250 131 -250 221 {lab=VN}
-N -280 131 -280 221 {lab=VN}
-N -310 221 -280 221 {lab=VN}
-N 150 10 150 100 {lab=#net2}
-N 180 100 210 100 {lab=#net2}
-N 210 10 210 100 {lab=#net2}
-N 180 10 180 100 {lab=#net2}
-N 150 100 180 100 {lab=#net2}
-N -160 131 -160 221 {lab=VN}
-N -130 221 -100 221 {lab=VN}
-N -100 131 -100 221 {lab=VN}
-N -130 131 -130 221 {lab=VN}
-N -160 221 -130 221 {lab=VN}
-N -130 11 -130 91 {lab=#net1}
-N 260 -110 260 -30 {lab=vout}
-N 230 10 230 100 {lab=VN}
-N 260 100 290 100 {lab=VN}
-N 290 10 290 100 {lab=VN}
-N 260 10 260 100 {lab=VN}
-N 230 100 260 100 {lab=VN}
-N 180 -110 260 -110 {lab=vout}
-N 260 -110 310 -110 {lab=vout}
-N -211 -110 20 -110 {lab=vin}
-N -280 221 -280 271 {lab=VN}
-N -210 271 -130 271 {lab=VN}
-N -130 221 -130 271 {lab=VN}
-N -280 271 -210 271 {lab=VN}
-N 180 100 180 150 {lab=#net2}
-N 260 100 260 150 {lab=VN}
-N 220 150 260 150 {lab=VN}
-N 220 150 220 310 {lab=VN}
-N 180 150 220 150 {lab=VN}
-N 40 310 220 310 {lab=VN}
-N -210 271 -210 310 {lab=VN}
-N -211 11 -130 11 {lab=#net1}
-N -211 -25 -211 11 {lab=#net1}
-N -280 11 -211 11 {lab=#net1}
-N -211 -110 -211 -77 {lab=vin}
-N -540 11 -540 91 {lab=vin}
-N -570 131 -570 221 {lab=VN}
-N -540 221 -510 221 {lab=VN}
-N -510 131 -510 221 {lab=VN}
-N -540 131 -540 221 {lab=VN}
-N -570 221 -540 221 {lab=VN}
-N -420 131 -420 221 {lab=VN}
-N -390 221 -360 221 {lab=VN}
-N -360 131 -360 221 {lab=VN}
-N -390 131 -390 221 {lab=VN}
-N -420 221 -390 221 {lab=VN}
-N -390 11 -390 91 {lab=vin}
-N -540 221 -540 271 {lab=VN}
-N -470 271 -390 271 {lab=VN}
-N -390 221 -390 271 {lab=VN}
-N -540 271 -470 271 {lab=VN}
-N -470 271 -470 310 {lab=VN}
-N -470 11 -390 11 {lab=vin}
-N -210 310 40 310 {lab=VN}
-N -470 310 -210 310 {lab=VN}
-N -470 -110 -211 -110 {lab=vin}
-N -600 -110 -470 -110 {lab=vin}
-N -540 11 -470 11 {lab=vin}
-N -470 -110 -470 11 {lab=vin}
-C {iopin.sym} 40 370 1 0 {name=p1 lab=VN}
-C {ipin.sym} -600 -110 0 0 {name=p2 lab=vin}
-C {opin.sym} 310 -110 0 0 {name=p3 lab=vout}
-C {lab_wire.sym} 260 -110 0 0 {name=p6 sig_type=std_logic lab=vout}
-C {lab_wire.sym} -520 -110 0 0 {name=p5 sig_type=std_logic lab=vin}
-C {lab_wire.sym} 40 310 1 0 {name=p4 sig_type=std_logic lab=VN}
-C {nmos4.sym} -540 110 1 0 {name=M7 model=nmos w=5u l=0.18u del=0 m=1}
-C {nmos4.sym} -390 110 1 0 {name=M5 model=nmos w=5u l=0.18u del=0 m=1}
-C {nmos4.sym} -280 110 1 0 {name=M8 model=nmos w=5u l=0.18u del=0 m=1}
-C {nmos4.sym} -130 110 1 0 {name=M9 model=nmos w=5u l=0.18u del=0 m=1}
-C {nmos4.sym} 180 -10 1 0 {name=M10 model=nmos w=5u l=0.18u del=0 m=1}
-C {nmos4.sym} 260 -10 1 0 {name=M11 model=nmos w=5u l=0.18u del=0 m=1}
-C {res.sym} -210 -50 0 0 {name=R1
+N 10 -90 110 -90 {lab=vout}
+N 110 -90 110 -10 {lab=vout}
+N -30 330 -30 390 {lab=VN}
+N 80 30 80 120 {lab=VN}
+N 110 120 140 120 {lab=VN}
+N 140 30 140 120 {lab=VN}
+N 110 30 110 120 {lab=VN}
+N 80 120 110 120 {lab=VN}
+N 190 -90 190 -10 {lab=vout}
+N 160 30 160 120 {lab=VN}
+N 190 120 220 120 {lab=VN}
+N 220 30 220 120 {lab=VN}
+N 190 30 190 120 {lab=VN}
+N 160 120 190 120 {lab=VN}
+N 110 -90 190 -90 {lab=vout}
+N 190 -90 240 -90 {lab=vout}
+N -281 -90 -50 -90 {lab=vin}
+N 110 120 110 170 {lab=VN}
+N 190 120 190 170 {lab=VN}
+N 150 170 190 170 {lab=VN}
+N 150 170 150 330 {lab=VN}
+N 110 170 150 170 {lab=VN}
+N -30 330 150 330 {lab=VN}
+N -610 31 -610 111 {lab=vin}
+N -460 31 -460 111 {lab=vin}
+N -540 31 -460 31 {lab=vin}
+N -280 330 -30 330 {lab=VN}
+N -540 330 -280 330 {lab=VN}
+N -540 -90 -281 -90 {lab=vin}
+N -670 -90 -540 -90 {lab=vin}
+N -610 31 -540 31 {lab=vin}
+N -540 -90 -540 31 {lab=vin}
+N -280 -90 -280 -60 {lab=vin}
+N -350 110 -200 110 {lab=#net1}
+N -280 0 -280 110 {lab=#net1}
+N -640 150 -640 260 {lab=VN}
+N -640 260 -610 260 {lab=VN}
+N -610 150 -610 260 {lab=VN}
+N -580 150 -580 260 {lab=VN}
+N -610 260 -580 260 {lab=VN}
+N -610 260 -610 330 {lab=VN}
+N -610 330 -540 330 {lab=VN}
+N -540 280 -540 330 {lab=VN}
+N -540 280 -460 280 {lab=VN}
+N -460 150 -460 280 {lab=VN}
+N -490 150 -460 150 {lab=VN}
+N -460 150 -430 150 {lab=VN}
+N -380 150 -350 150 {lab=VN}
+N -350 150 -320 150 {lab=VN}
+N -320 150 -320 290 {lab=VN}
+N -320 290 -280 290 {lab=VN}
+N -280 290 -230 290 {lab=VN}
+N -230 150 -230 290 {lab=VN}
+N -230 150 -200 150 {lab=VN}
+N -200 150 -170 150 {lab=VN}
+N -280 290 -280 330 {lab=VN}
+C {iopin.sym} -30 390 1 0 {name=p1 lab=VN}
+C {ipin.sym} -670 -90 0 0 {name=p2 lab=vin}
+C {opin.sym} 240 -90 0 0 {name=p3 lab=vout}
+C {lab_wire.sym} 190 -90 0 0 {name=p6 sig_type=std_logic lab=vout}
+C {lab_wire.sym} -590 -90 0 0 {name=p5 sig_type=std_logic lab=vin}
+C {lab_wire.sym} -30 330 1 0 {name=p4 sig_type=std_logic lab=VN}
+C {nmos4.sym} -610 130 1 0 {name=M7 model=nmos w=5u l=0.18u del=0 m=1}
+C {nmos4.sym} -460 130 1 0 {name=M5 model=nmos w=5u l=0.18u del=0 m=1}
+C {nmos4.sym} -350 130 1 0 {name=M8 model=nmos w=5u l=0.18u del=0 m=1}
+C {nmos4.sym} -200 130 1 0 {name=M9 model=nmos w=5u l=0.18u del=0 m=1}
+C {nmos4.sym} 110 10 1 0 {name=M10 model=nmos w=5u l=0.18u del=0 m=1}
+C {nmos4.sym} 190 10 1 0 {name=M11 model=nmos w=5u l=0.18u del=0 m=1}
+C {res.sym} -280 -30 0 0 {name=R1
 value=1k
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 50 -110 1 0 {name=R2
+C {res.sym} -20 -90 1 0 {name=R2
 value=1k
 footprint=1206
 device=resistor
